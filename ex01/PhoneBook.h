@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phone_book.h                                       :+:      :+:    :+:   */
+/*   PhoneBook.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 17:19:34 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/10/26 17:26:41 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/10/27 11:16:26 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,13 @@ class	Contact
 	public:
 		Contact(void);
 		bool	seter();
-		void	geter();
+		void	geter(int index);
 };
 
 class	PhoneBook
 {
-	int	indix;
+	int		index;
+	Contact	contacts[8];
 	public:
 		PhoneBook(void);
 		void	seter();

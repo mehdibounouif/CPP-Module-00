@@ -6,7 +6,7 @@
 #    By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/26 07:59:46 by mbounoui          #+#    #+#              #
-#    Updated: 2025/10/26 08:01:11 by mbounoui         ###   ########.fr        #
+#    Updated: 2025/10/27 09:00:27 by mbounoui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC			=	c++
 
 CFLAGS		=	-Wall -Werror -Wextra -std=c++98
 
-SRC_FILES	=	main.cpp phonebook.cpp
+SRC_FILES	=	main.cpp PhoneBook.cpp Contact.cpp
 
 OBJ_FILES	=	$(SRC_FILES:.cpp=.o)
 
@@ -32,7 +32,7 @@ clean:
 	rm -rf $(OBJ_FILES);
 
 fclean: clean
-	rm -f $(NAME); \
+	rm -f $(NAME);
 
 re: fclean all
 
