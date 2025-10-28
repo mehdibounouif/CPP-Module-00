@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 08:06:40 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/10/27 11:16:10 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/10/28 10:25:52 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,16 @@ PhoneBook::PhoneBook(void)
 
 void	PhoneBook::display(void)
 {
-	std::cout << "Enter your command:" << std::endl;
-	std::cout << "  *** ADD ******" << std::endl;
-	std::cout << "  *** SEARCH ***" << std::endl;
-	std::cout << "  *** EXIT *****" << std::endl;
-	std::cout << "/> ";
+	std::cout << "\n\tHow i can serve you?" << std::endl;
+	std::cout << "\t********************\n" << std::endl;
+	std::cout << "- To add new contact type     \"ADD\"" << std::endl;
+	std::cout << "- To search for contact type \"SEARCH\"" << std::endl;
+	std::cout << "- To exit type                \"EXIT\"" << std::endl;
+	std::cout << "\n/> ";
 }
 
 void	PhoneBook::geter(void)
 {
-	std::cout << "Get Information" << std::endl;
 	if (!this->index)
 	{
 		std::cout << "You have no contacts." << std::endl;
@@ -40,6 +40,8 @@ void	PhoneBook::geter(void)
 		std::cout << "Enter contact's index that you want to see [0 => 8]." << std::endl;
 		std::cout << "/> ";
 		std::getline(std::cin, input);
+		if(std::cin.eof())
+			exit(1);
 		if ((std::atoi(input.c_str()) - 1) > this->index)
 		{
 			input.clear();
@@ -69,7 +71,6 @@ void	PhoneBook::geter(void)
 
 void	PhoneBook::seter(void)
 {
-	std::cout << "Set Information" << std::endl;
 	std::string input;
 	if (this->index < 7)
 	{

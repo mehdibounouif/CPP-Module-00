@@ -6,7 +6,7 @@
 #    By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/26 07:59:46 by mbounoui          #+#    #+#              #
-#    Updated: 2025/10/27 09:00:27 by mbounoui         ###   ########.fr        #
+#    Updated: 2025/10/28 08:00:18 by mbounoui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME		=	phonebook
 
 CC			=	c++
 
-CFLAGS		=	-Wall -Werror -Wextra -std=c++98
+CFLAGS		=	-g3 -Wall -Werror -Wextra -std=c++98
 
 SRC_FILES	=	main.cpp PhoneBook.cpp Contact.cpp
 

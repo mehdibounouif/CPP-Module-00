@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 08:08:27 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/10/27 09:28:40 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/10/28 10:40:54 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main()
 			phone.geter();
 		else if (!prompt.compare("EXIT"))
 		{
-			std::cout << "Good bye." << std::endl;
+			std::cout << "See you homie." << std::endl;
 			return (0);
 		}
 		else
@@ -39,6 +39,6 @@ int	main()
 			phone.display();
 			continue;
 		}
-		std::cout << "/> ";
+		phone.display();
 	}
 }
