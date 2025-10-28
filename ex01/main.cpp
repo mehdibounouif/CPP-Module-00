@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 08:08:27 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/10/28 10:54:09 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/10/28 11:03:36 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	main()
 {
 	std::string prompt;
 	PhoneBook phone;
-	phone.display();
+	phone.prompt();
 	while (std::getline(std::cin, prompt))
 	{
 		if (std::cin.eof())
@@ -36,9 +36,9 @@ int	main()
 		else
 		{
 			prompt.clear();
-			phone.display();
+			phone.prompt();
 			continue;
 		}
-		phone.display();
+		phone.prompt();
 	}
 }

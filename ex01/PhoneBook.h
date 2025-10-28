@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 17:19:34 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/10/28 10:44:31 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/10/28 11:21:58 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,7 @@ class	PhoneBook
 		PhoneBook(void);
 		void	seter();
 		void	geter();
-		void	display();
+		void	prompt();
+		void	display_lables();
+		void	display_all_contacts();
 };

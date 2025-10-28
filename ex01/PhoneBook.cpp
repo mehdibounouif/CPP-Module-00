@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 08:06:40 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/10/28 10:51:32 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/10/28 11:46:17 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,22 @@ PhoneBook::PhoneBook(void)
 	this->index = 0;
 }
 
-void	PhoneBook::display(void)
+void	PhoneBook::display_all_contacts(void)
+{
+	for (int i = 0; i < 8; i++)
+	{
+		PhoneBook::contacts[i].geter(i + 1);
+	}
+}
+
+void	PhoneBook::display_lables(void)
+{
+	std::cout << "|-------------------------------------------|" << std::endl;
+	std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
+	std::cout << "|----------|----------|----------|----------|" << std::endl;
+}
+
+void	PhoneBook::prompt(void)
 {
 	std::cout << "\n\t\e[1;33mHow i can serve you?\033[0m" << std::endl;
 	std::cout << "\t\e[1;33m********************\033[0m\n" << std::endl;
@@ -61,9 +76,7 @@ void	PhoneBook::geter(void)
 			break;
 	}
 	int	index = std::atoi(input.c_str());
-	std::cout << "|-------------------------------------------|" << std::endl;
-	std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
-	std::cout << "|----------|----------|----------|----------|" << std::endl;
+	this->display_lables();
 	this->contacts[index - 1].geter(index);
 	std::cout << "|-------------------------------------------|" << std::endl;
 	return ;
@@ -75,22 +88,23 @@ void	PhoneBook::seter(void)
 	if (this->index < 7)
 	{
 		if (this->contacts[this->index].seter())
-			this->index++;
+			this->index = 7;
 	}
 	else
 	{
-		for (int i = 0; i < 7; i++)
-			this->contacts[i] = this->contacts[i+1];
-		std::cout << "This is yout contact 8" << std::endl;
-		std::cout << "Do you want me to repleace this with new contact (Y or N) ?" << std::endl;
+		std::cout << "\nThis is your all contact :" << std::endl;
+		this->display_lables();
+		this->display_all_contacts();
+		std::cout << "|-------------------------------------------|" << std::endl;
+		std::cout << "Do you want me to repleace 8th contact with new contact (Y or N) ?" << std::endl;
 		while (true)
 		{
 			std::cout << "/> ";
 			std::getline(std::cin, input);
-			if (input.compare("Y"))
+			if (!input.compare("Y"))
 				this->contacts[this->index].seter();
-			else if (input.compare("N"))
-				std::cout << "No create No delete.";
+			else if (!input.compare("N"))
+				std::cout << "No Update.";
 			else
 			{
 				std::cout << "Please enter (Y or N): " << std::endl;
