@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 08:08:27 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/10/28 10:40:54 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/10/28 10:54:09 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main()
 			phone.geter();
 		else if (!prompt.compare("EXIT"))
 		{
-			std::cout << "See you homie." << std::endl;
+			std::cout << "\e[1;32mSee you homie.\033[0m" << std::endl;
 			return (0);
 		}
 		else

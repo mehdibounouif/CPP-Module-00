@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 08:06:40 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/10/28 10:25:52 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/10/28 10:51:32 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ PhoneBook::PhoneBook(void)
 
 void	PhoneBook::display(void)
 {
-	std::cout << "\n\tHow i can serve you?" << std::endl;
-	std::cout << "\t********************\n" << std::endl;
-	std::cout << "- To add new contact type     \"ADD\"" << std::endl;
-	std::cout << "- To search for contact type \"SEARCH\"" << std::endl;
-	std::cout << "- To exit type                \"EXIT\"" << std::endl;
+	std::cout << "\n\t\e[1;33mHow i can serve you?\033[0m" << std::endl;
+	std::cout << "\t\e[1;33m********************\033[0m\n" << std::endl;
+	std::cout << "- To add new contact type     \e[1;34m\"ADD\"\033[0m" << std::endl;
+	std::cout << "- To search for contact type \e[1;32m\"SEARCH\"\033[0m" << std::endl;
+	std::cout << "- To exit type                \e[1;33m\"EXIT\"\033[0m" << std::endl;
 	std::cout << "\n/> ";
 }
 

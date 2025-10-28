@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 11:18:21 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/10/28 10:40:12 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/10/28 10:55:17 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,14 @@ int	Contact::seter(void)
 			if (this->info[i].empty())
 			{
 				this->info[i].clear();
-				std::cout << "Lables must not be empty!" << std::endl;
+				std::cout << "\e[1;31mLables must not be empty!\033[0m" << std::endl;
 				std::cout << "Please enter the " << this->fields_name[i] << ":\n/> ";
 				std::getline(std::cin, this->info[i]);
 			}
 		}
 	}
-	std::cout << "\tContact added sucessfully."<< std::endl;
-	std::cout << "\t**************************\n"<< std::endl;
+	std::cout << YELLOW << "\t\e[1;32mContact added sucessfully.\033[0m"<< std::endl;
+	std::cout << YELLOW << "\t\e[1;32m**************************\033[0m\n"<< std::endl;
 	return (1);
 }
 
