@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 17:19:34 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/10/28 11:21:58 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/10/29 07:55:49 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class	Contact
 	std::string			info[5];
 	public:
 		Contact(void);
-		int		seter();
+		void	seter();
 		void	geter(int index);
 };
 

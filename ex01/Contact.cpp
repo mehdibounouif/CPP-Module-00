@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 11:18:21 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/10/28 10:55:17 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/10/29 07:55:41 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Contact::Contact()
 		this->info[i] = std::string();
 }
 
-int	Contact::seter(void)
+void	Contact::seter(void)
 {
 	for (int i = 0; i < 5; i++)
 	{
@@ -48,7 +48,6 @@ int	Contact::seter(void)
 	}
 	std::cout << YELLOW << "\t\e[1;32mContact added sucessfully.\033[0m"<< std::endl;
 	std::cout << YELLOW << "\t\e[1;32m**************************\033[0m\n"<< std::endl;
-	return (1);
 }
 
 void	Contact::geter(int index)

@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 08:06:40 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/10/28 11:46:17 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/10/29 07:56:17 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,8 +87,8 @@ void	PhoneBook::seter(void)
 	std::string input;
 	if (this->index < 7)
 	{
-		if (this->contacts[this->index].seter())
-			this->index = 7;
+		this->contacts[this->index].seter();
+		this->index++;
 	}
 	else
 	{

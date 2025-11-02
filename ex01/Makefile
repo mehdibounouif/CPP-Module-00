@@ -6,7 +6,7 @@
 #    By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/26 07:59:46 by mbounoui          #+#    #+#              #
-#    Updated: 2025/10/28 08:00:18 by mbounoui         ###   ########.fr        #
+#    Updated: 2025/10/29 08:28:35 by mbounoui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ $(NAME): $(OBJ_FILES)
 	@$(CC) $(CFLAGS) $(OBJ_FILES) -o $(NAME)
 
 %.o:%.cpp
-	@$(CC) $(CFLAGS) -I $(INC_DIR) -o $@ -c $<
+	@$(CC) $(CFLAGS) -o $@ -c $<
 
 clean:
 	rm -rf $(OBJ_FILES);
