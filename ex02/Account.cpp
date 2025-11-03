@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 09:38:49 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/03 11:47:54 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/03 15:46:00 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ Account::Account( int initial_deposit )
 	Account::_totalAmount += this->_amount;
 	Account::_nbAccounts++;
 	std::cout << "index:" << Account::_accountIndex << ";";
-	std::cout << "amount:" << Account::_totalAmount << ";";
+	std::cout << "amount:" << Account::checkAmount() << ";";
 	std::cout << "created" << std::endl;
 }
 
@@ -110,7 +110,10 @@ bool	Account::makeWithdrawal( int withdrawal )
 
 void	Account::_displayTimestamp( void )
 {
+	// returns the current time in seconds since the epoch (January 1, 1970, 00:00:00 UTC).
 	time_t now = std::time(NULL);
+	// converts now (seconds since epoch) into local time, filling a tm struct
+	// into struct that pointed by timenow
 	struct tm *timenow = std::localtime(&now);
 
 	std::cout << "[" << timenow->tm_year + 1900 <<
