@@ -30,13 +30,13 @@ int		main( void ) {
 	ints_t::iterator	dep_begin	= deposits.begin();
 	ints_t::iterator	dep_end		= deposits.end();
 
-//	int	const			w[]			= { 321, 34, 657, 4, 76, 275, 657, 7654 };
-//	size_t const		w_size( sizeof(w) / sizeof(int) );
-//	ints_t				withdrawals( w, w + w_size );
-//	ints_t::iterator	wit_begin	= withdrawals.begin();
-//	ints_t::iterator	wit_end		= withdrawals.end();
+	int	const			w[]			= { 321, 34, 657, 4, 76, 275, 657, 7654 };
+	size_t const		w_size( sizeof(w) / sizeof(int) );
+	ints_t				withdrawals( w, w + w_size );
+	ints_t::iterator	wit_begin	= withdrawals.begin();
+	ints_t::iterator	wit_end		= withdrawals.end();
 
-	std::cout << std::endl;
+	std::cout << "==============================" << std::endl;
 	Account::displayAccountsInfos();
 	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
 
@@ -47,21 +47,21 @@ int		main( void ) {
 		(*(it.first)).makeDeposit( *(it.second) );
 	}
 
-	std::cout << std::endl;
+	std::cout << "==============================" << std::endl;
 	Account::displayAccountsInfos();
 	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
-	std::cout << std::endl;
-//
-//	for ( acc_int_t it( acc_begin, wit_begin );
-//		  it.first != acc_end && it.second != wit_end;
-//		  ++(it.first), ++(it.second) ) {
-//
-//		(*(it.first)).makeWithdrawal( *(it.second) );
-//	}
+
+	for ( acc_int_t it( acc_begin, wit_begin );
+		  it.first != acc_end && it.second != wit_end;
+		  ++(it.first), ++(it.second) ) {
+
+		(*(it.first)).makeWithdrawal( *(it.second) );
+	}
+	std::cout << "==============================" << std::endl;
 
 	Account::displayAccountsInfos();
 	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
-	std::cout << std::endl;
+	std::cout << "==============================" << std::endl;
 
 	return 0;
 }
