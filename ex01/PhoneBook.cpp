@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 11:26:25 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/07 10:46:30 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/07 11:05:29 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ void	PhoneBook::geter(void)
 void	PhoneBook::seter()
 {
 	std::string input;
-	if (this->index < 3)
+	if (this->index <= 7)
 	{
 		this->contacts[this->index].seter();
 		this->index++;
@@ -106,7 +106,7 @@ void	PhoneBook::seter()
 			std::getline(std::cin, input);
 			if (!input.compare("Y"))
 			{
-				this->contacts[this->counter++ % 3].seter();
+				this->contacts[this->counter++ % 8].seter();
 			}
 			else if (!input.compare("N"))
 				std::cout << "No update.";
