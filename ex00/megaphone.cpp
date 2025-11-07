@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/25 09:38:15 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/10/25 09:55:56 by mbounoui         ###   ########.fr       */
+/*   Created: 2025/11/04 10:25:52 by mbounoui          #+#    #+#             */
+/*   Updated: 2025/11/04 16:14:31 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,17 @@
 
 int	main(int c, char **v)
 {
-	int	i;
-	int	j;
 	if (c == 1)
 	{
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 		return (1);
 	}
-
-	i = 1;
-	while (i < c)
+	for (int i = 1; i < c; i++)
 	{
-		j = 0;
-		while (v[i][j] != '\0')
-		{
+		for(int j = 0; v[i][j] != '\0'; j++)
 			std::cout << (char)toupper(v[i][j]);
-			j++;
-		}
-		i++;
+		if (i != c - 1)
+			std::cout << " ";
 	}
 	std::cout << std::endl;
 	return (0);

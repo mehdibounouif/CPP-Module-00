@@ -22,9 +22,7 @@ int		main( void )
 	typedef std::pair<accounts_t::iterator, ints_t::iterator> acc_int_t;
 
 	int	const				amounts[]	= { 42, 54, 957, 432, 1234, 0, 754, 16576 };
-							// direct-initialization syntax
 	size_t const			amounts_size( sizeof(amounts) / sizeof(int) );
-							// vector constarctor
 	accounts_t				accounts( amounts, amounts + amounts_size );
 	accounts_t::iterator	acc_begin	= accounts.begin();
 	accounts_t::iterator	acc_end		= accounts.end();
@@ -41,9 +39,7 @@ int		main( void )
 	ints_t::iterator	wit_begin	= withdrawals.begin();
 	ints_t::iterator	wit_end		= withdrawals.end();
 
-	std::cout << "==============================" << std::endl;
 	Account::displayAccountsInfos();
-		// algorithm defind in <algorithm> 
 	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
 
 	for ( acc_int_t it( acc_begin, dep_begin );
@@ -53,7 +49,6 @@ int		main( void )
 		(*(it.first)).makeDeposit( *(it.second) );
 	}
 
-	std::cout << "==============================" << std::endl;
 	Account::displayAccountsInfos();
 	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
 
@@ -63,12 +58,9 @@ int		main( void )
 
 		(*(it.first)).makeWithdrawal( *(it.second) );
 	}
-	std::cout << "==============================" << std::endl;
 
 	Account::displayAccountsInfos();
 	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
-	std::cout << "==============================" << std::endl;
-
 	return 0;
 }
 

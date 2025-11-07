@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.h                                        :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/26 17:19:34 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/10/29 07:55:49 by mbounoui         ###   ########.fr       */
+/*   Created: 2025/11/04 11:21:59 by mbounoui          #+#    #+#             */
+/*   Updated: 2025/11/07 10:16:31 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef PHONEBOOK
+#define PHONEBOOK
 
 #include <iomanip>
 #include <iostream>
 #include <cstdlib>
-
-# define YELLOW "\e[0;33m"
-# define GREEN "\e[0;32m"
-# define RED "\e[0;31m"
-
-class	Contact
-{
-	static std::string	fields_name[5];
-	std::string			info[5];
-	public:
-		Contact(void);
-		void	seter();
-		void	geter(int index);
-};
+#include "Contact.hpp"
 
 class	PhoneBook
 {
 	int		index;
+	size_t	counter;
 	Contact	contacts[8];
 	public:
 		PhoneBook(void);
@@ -40,3 +31,5 @@ class	PhoneBook
 		void	display_lables();
 		void	display_all_contacts();
 };
+
+#endif
