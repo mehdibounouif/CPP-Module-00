@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 09:14:27 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/08 14:22:45 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/09 11:12:10 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Zombie
 {
 	std::string name;
 	public:
-		void annouce();
+		void announce();
 		Zombie(std::string name);
 		~Zombie(void);
 };

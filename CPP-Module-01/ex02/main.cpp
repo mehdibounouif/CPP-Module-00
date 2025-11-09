@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/08 09:28:47 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/09 11:12:18 by mbounoui         ###   ########.fr       */
+/*   Created: 2025/11/09 11:18:14 by mbounoui          #+#    #+#             */
+/*   Updated: 2025/11/09 11:29:03 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.h"
+#include <iostream>
 
-void Zombie::announce()
+int	main()
 {
-	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
-Zombie::Zombie(std::string name)
-{
-	this->name = name;
-}
-Zombie::~Zombie(void)
-{
-	std::cout << this->name << " is destroyed!" << std::endl;
-}
+	std::string string = "HI THIS IS BRAIN";
+	std::string *stringPTR = &string;
+	std::string &stringREF = string;
 
+	std::cout << &string << std::endl;
+	std::cout << stringPTR << std::endl;
+	std::cout << &stringREF << std::endl;
+
+	std::cout << string << std::endl;
+	std::cout << *stringPTR << std::endl;
+	std::cout << stringREF << std::endl;
+}

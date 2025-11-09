@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 09:14:15 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/08 14:24:00 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/09 11:12:26 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	main()
 {
 	randomChump("mehdi");
 	Zombie *zombie = newZombie("taha");
-	zombie->annouce();
+	zombie->announce();
 	delete zombie;
 	return (0);
 }
