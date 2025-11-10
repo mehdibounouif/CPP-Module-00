@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 12:50:53 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/10 13:41:43 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/10 13:45:34 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ int	main(int c, char **v)
 		size_t pos = line.find(s2);
 		if (pos != std::string::npos)
 		{
-			line.substr(pos, s2.length());
 			line.insert(pos, s3);
 			line.erase(pos + s3.length(), s2.length());
 			
