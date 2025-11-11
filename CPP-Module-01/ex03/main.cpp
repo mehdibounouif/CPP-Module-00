@@ -6,16 +6,13 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 14:52:48 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/10 11:16:33 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/11 14:48:30 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.h"
 #include "HumanA.h"
 #include "HumanB.h"
-
-
-
 
 int main()
 {
