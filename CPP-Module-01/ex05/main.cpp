@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 08:45:32 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/12 09:38:49 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/12 11:03:40 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	Harl::complain(std::string level)
 {
 	std::string levels[4] = {"ERROR", "WARNING", "DEBUG", "INFO"};
+
 
 	void	(Harl::*functions[4])() = 
 	{

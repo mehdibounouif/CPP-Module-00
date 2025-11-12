@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 11:23:14 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/10 11:24:58 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/12 10:53:19 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Weapon::Weapon(std::string type)
 	this->type = type;
 }
 
-std::string Weapon::getType()
+const std::string &Weapon::getType()
 {
 	return (type);
 }

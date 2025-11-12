@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 12:50:53 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/12 09:24:39 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/12 10:44:20 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	main(int c, char **v)
 		std::cout << "Cannot open file!" << std::endl;
 		return (EXIT_FAILURE);
 	}
-	std::ofstream output((s1+".replace").c_str());
+	std::ofstream output(((s1+".replace").c_str()));
 	if (!output.is_open())
 	{
 		input.close();
@@ -49,12 +49,14 @@ int	main(int c, char **v)
 	std::string line;
 	while (std::getline(input, line))
 	{
-		size_t pos = line.find(s2);
-		if (pos != std::string::npos)
+		for (int i = 0; line[i] != '\0'; i++)
 		{
-			line.insert(pos, s3);
-			line.erase(pos + s3.length(), s2.length());
-			
+			size_t pos = line.find(s2);
+			if (pos != std::string::npos)
+			{
+					line.insert(pos, s3);
+					line.erase(pos + s3.length(), s2.length());
+			}
 		}
 		output << line;
 		output << '\n';

@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 10:53:44 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/12 09:07:13 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/12 10:23:40 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,9 @@ void	HumanB::setWeapon(Weapon &wep)
 	this->weapon = &wep;
 }
 
-HumanB::HumanB(std::string name) : weapon(0)
+HumanB::HumanB(std::string name)
 {
+	this->weapon = 0;
 	this->name = name;
 }
 
