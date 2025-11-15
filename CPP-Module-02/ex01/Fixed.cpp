@@ -5,23 +5,41 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/12 14:36:36 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/15 09:13:58 by mbounoui         ###   ########.fr       */
+/*   Created: 2025/11/15 09:17:09 by mbounoui          #+#    #+#             */
+/*   Updated: 2025/11/15 11:24:19 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.h"
+#include <math.h>
 
 Fixed::Fixed()
 {
 	std::cout << "Default constructor called\n";
-	fixed_point = 0;
+}
+
+Fixed::Fixed(const int num)
+{
+	this->fixed_point = (num << 8);
+	std::cout << "int constructor called\n";
+}
+
+Fixed::Fixed(const float num)
+{
+	this->fixed_point = roundf(num * 256);
+	std::cout << "float constructor called\n";
+}
+
+std::ostream& operator<<(std::ostream& os, const Fixed& obj)
+{
+	os << obj.toFloat();
+	return os;
 }
 
 Fixed::Fixed(const Fixed &obj)
 {
+	this->fixed_point = obj.fixed_point;
 	std::cout << "Copy constructor called\n";
-	this->fixed_point = obj.getRawBits();
 }
 
 Fixed &Fixed::operator=(const Fixed &obj)
@@ -29,7 +47,7 @@ Fixed &Fixed::operator=(const Fixed &obj)
 	std::cout << "Copy assignment operator called\n";
 	if (this == &obj)
 		return (*this);
-	this->fixed_point = obj.getRawBits();
+	this->fixed_point = obj.fixed_point;
 	return (*this);
 }
 
@@ -38,14 +56,12 @@ Fixed::~Fixed()
 	std::cout << "Destructor called\n";
 }
 
-int Fixed::getRawBits(void) const
+float Fixed::toFloat( void ) const
 {
-	std::cout << "getRawBits member function called\n";
-	return (fixed_point);
+	return ((float)this->fixed_point / 256);
 }
 
-void Fixed::setRawBits(int const raw)
+int Fixed::toInt( void ) const
 {
-	std::cout << "setRawBits member function called\n";
-	this->fixed_point = raw;
+	return (this->fixed_point >> this->fractions);
 }
