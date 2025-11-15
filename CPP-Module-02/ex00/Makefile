@@ -6,12 +6,12 @@
 #    By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/12 14:36:31 by mbounoui          #+#    #+#              #
-#    Updated: 2025/11/15 08:57:25 by mbounoui         ###   ########.fr        #
+#    Updated: 2025/11/15 11:29:59 by mbounoui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = Fixed
+NAME = Fixed1
 
 CC = c++
 

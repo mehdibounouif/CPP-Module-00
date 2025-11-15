@@ -5,12 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/11/15 09:16:50 by mbounoui          #+#    #+#              #
-#    Updated: 2025/11/15 11:29:52 by mbounoui         ###   ########.fr        #
+#    Created: 2025/11/15 11:29:33 by mbounoui          #+#    #+#              #
+#    Updated: 2025/11/15 11:29:44 by mbounoui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Fixed2
+
+NAME = Fixed3
 
 CC = c++
 
