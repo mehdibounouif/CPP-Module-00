@@ -6,18 +6,19 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 10:15:08 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/16 10:48:33 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/16 14:28:21 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.h"
 #include "Point.h"
 
 int	main()
 {
-	Point a;
-	Fixed f;
-	Point b = a;
-	b = a;
+	Point a(0,0);
+	Point b(10, 30);
+	Point c(20,0);
+	Point point(-1, -1);
+	std::cout << bsp( a, b, c, point) << std::endl;
+
 	return (0);
 }

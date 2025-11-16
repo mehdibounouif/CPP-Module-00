@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 10:28:45 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/16 10:53:24 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/16 11:18:10 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,14 @@ Point::Point(const Point &obj)
 
 Point::~Point()
 {
+}
+
+Fixed Point::geterX() const
+{
+	return (x);
+}
+
+Fixed Point::geterY() const
+{
+	return (y);
 }
