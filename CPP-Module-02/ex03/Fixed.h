@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/15 09:17:10 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/16 09:29:12 by mbounoui         ###   ########.fr       */
+/*   Created: 2025/11/16 10:09:18 by mbounoui          #+#    #+#             */
+/*   Updated: 2025/11/16 10:09:31 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define _MEHDI_
 
 #include <iostream>
+#include <math.h>
 
 class Fixed
 {
@@ -30,7 +31,28 @@ class Fixed
 		int toInt( void ) const;
 		int getRawBits(void) const;
 		void setRawBits(int const raw);
+
+		bool	operator>(const Fixed &other) const;
+		bool	operator<(const Fixed &other) const;
+		bool	operator>=(const Fixed &other) const;
+		bool	operator<=(const Fixed &other) const;
+		bool	operator==(const Fixed &other) const;
+		bool	operator!=(const Fixed &other) const;
+
+		Fixed	operator+(const Fixed &other) const;
+		Fixed	operator-(const Fixed &other) const;
+		Fixed	operator*(const Fixed &other) const;
+		Fixed	operator/(const Fixed &other) const;
+		Fixed	&operator++();
+		Fixed	&operator--();
+		Fixed	operator++(int);
+		Fixed	operator--(int);
+
+		static Fixed	&min(Fixed &a, Fixed &b);
+		static Fixed	&max(Fixed &a, Fixed &b);
+		static Fixed const	&min(Fixed const &a, Fixed const &b);
+		static Fixed const	&max(Fixed const &a, Fixed const &b);
 };
 
-std::ostream& operator<<(std::ostream& os, const Fixed& obj);
+std::ostream& operator<<(std::ostream &stream, const Fixed &obj);
 #endif

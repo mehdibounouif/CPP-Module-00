@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/15 09:17:09 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/15 11:24:19 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/16 09:29:31 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,16 @@ float Fixed::toFloat( void ) const
 int Fixed::toInt( void ) const
 {
 	return (this->fixed_point >> this->fractions);
+}
+
+int Fixed::getRawBits(void) const
+{
+	std::cout << "getRawBits member function called\n";
+	return (fixed_point);
+}
+
+void Fixed::setRawBits(int const raw)
+{
+	std::cout << "setRawBits member function called\n";
+	this->fixed_point = raw;
 }

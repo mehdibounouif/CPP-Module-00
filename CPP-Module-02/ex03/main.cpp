@@ -5,23 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/15 11:30:04 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/16 08:59:24 by mbounoui         ###   ########.fr       */
+/*   Created: 2025/11/16 10:15:08 by mbounoui          #+#    #+#             */
+/*   Updated: 2025/11/16 10:48:33 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.h"
+#include "Point.h"
 
-int main( void )
+int	main()
 {
-	Fixed a;
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
-	std::cout << Fixed::max( a, b ) << std::endl;
-	return 0;
+	Point a;
+	Fixed f;
+	Point b = a;
+	b = a;
+	return (0);
 }

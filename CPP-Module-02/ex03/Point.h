@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.h                                            :+:      :+:    :+:   */
+/*   Point.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/15 09:17:10 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/16 09:29:12 by mbounoui         ###   ########.fr       */
+/*   Created: 2025/11/16 10:12:07 by mbounoui          #+#    #+#             */
+/*   Updated: 2025/11/16 10:52:37 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef _MEHDI_
-#define _MEHDI_
+#ifndef _POINT_
+#define _POINT_
 
 #include <iostream>
+#include "Fixed.h"
 
-class Fixed
+class Point
 {
-	int	fixed_point;
-	static const int fractions = 8;
+	Fixed x;
+	Fixed y;
 	public:
-		Fixed();
-		Fixed(const int);
-		Fixed(const float);
-		~Fixed();
-		Fixed(const Fixed &obj);
-		Fixed &operator=(const Fixed &obj);
-		float toFloat( void ) const;
-		int toInt( void ) const;
-		int getRawBits(void) const;
-		void setRawBits(int const raw);
+		Point();
+		Point(const float x, const float y);
+		~Point();
+		Point &operator=(const Point &obj);
+		Point(const Point &obj);
 };
 
-std::ostream& operator<<(std::ostream& os, const Fixed& obj);
+std::ostream &operator<<(std::ostream &s,const Point &obj);
 #endif
