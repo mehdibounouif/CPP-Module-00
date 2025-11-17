@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/15 09:17:09 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/16 09:29:31 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/17 08:53:06 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,18 @@
 Fixed::Fixed()
 {
 	std::cout << "Default constructor called\n";
+	this->fixed_point = 0;
 }
 
 Fixed::Fixed(const int num)
 {
-	this->fixed_point = (num << 8);
+	this->fixed_point = (num << fractions);
 	std::cout << "int constructor called\n";
 }
 
 Fixed::Fixed(const float num)
 {
-	this->fixed_point = roundf(num * 256);
+	this->fixed_point = roundf(num * (1 << fractions));
 	std::cout << "float constructor called\n";
 }
 
@@ -58,7 +59,7 @@ Fixed::~Fixed()
 
 float Fixed::toFloat( void ) const
 {
-	return ((float)this->fixed_point / 256);
+	return ((float)this->fixed_point / (1 << fractions));
 }
 
 int Fixed::toInt( void ) const

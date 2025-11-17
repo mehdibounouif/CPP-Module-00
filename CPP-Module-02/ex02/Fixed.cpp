@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/15 11:32:50 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/16 09:46:05 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/17 09:01:08 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,30 +23,30 @@ Fixed&	Fixed::operator=(const Fixed &obj)
 Fixed::Fixed(const Fixed &obj)
 {
 	this->fixed_point = obj.fixed_point;
-//	std::cout << "Copy constructor called\n";
+	std::cout << "Copy constructor called\n";
 }
 
 Fixed::Fixed(const int fixed_point)
 {
 	this->fixed_point = fixed_point * (1 << fractions);
-//	std::cout << "Int constructor called\n";
+	std::cout << "Int constructor called\n";
 }
 
 Fixed::Fixed(const float fixed_point)
 {
 	this->fixed_point = roundf(fixed_point * (1 << fractions));
-//	std::cout << "Float constructor called\n";
+	std::cout << "Float constructor called\n";
 }
 
 Fixed::Fixed()
 {
 	this->fixed_point = 0;
-//	std::cout << "Default constructor called\n";
+	std::cout << "Default constructor called\n";
 }
 
 Fixed::~Fixed()
 {
-//	std::cout << "Destructor called\n";
+	std::cout << "Destructor called\n";
 }
 
 float	Fixed::toFloat( void ) const
@@ -150,7 +150,6 @@ const	Fixed&	Fixed::max(const Fixed &a, const Fixed &b)
 		return (a);
 	return (b);
 }
-
 
 Fixed	Fixed::operator--(int)
 {

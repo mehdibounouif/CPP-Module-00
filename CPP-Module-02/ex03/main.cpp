@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 10:15:08 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/16 14:28:21 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/17 09:15:36 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	main()
 	Point a(0,0);
 	Point b(10, 30);
 	Point c(20,0);
-	Point point(-1, -1);
+	Point point(3, 3);
 	std::cout << bsp( a, b, c, point) << std::endl;
 
 	return (0);

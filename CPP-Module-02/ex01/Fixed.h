@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/15 09:17:10 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/16 09:29:12 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/17 08:25:05 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,5 @@ class Fixed
 };
 
 std::ostream& operator<<(std::ostream& os, const Fixed& obj);
+
 #endif
