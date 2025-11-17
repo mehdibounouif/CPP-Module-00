@@ -6,38 +6,28 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 10:28:45 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/16 11:18:10 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/17 11:16:57 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.h"
 #include "Point.h"
 
-Point::Point()
+Point::Point() : x(0), y(0)
 {
-	this->x = 0;
-	this->y = 0;
 }
 
-Point::Point(const float x, const float y)
+Point::Point(const float x, const float y) : x(x), y(y)
 {
-	this->x = x;
-	this->y = y;
 }
 
 Point &Point::operator=(const Point &obj)
 {
-	if (this == &obj)
-		return (*this);
-	this->x = obj.x;
-	this->y = obj.y;
 	return (*this);
 }
 
-Point::Point(const Point &obj)
+Point::Point(const Point &obj) : x(obj.x), y(obj.y)
 {
-	this->x = obj.x;
-	this->y = obj.y;
 }
 
 Point::~Point()

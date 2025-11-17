@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 10:09:35 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/16 10:10:02 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/17 11:18:05 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,35 +23,30 @@ Fixed&	Fixed::operator=(const Fixed &obj)
 Fixed::Fixed(const Fixed &obj)
 {
 	this->fixed_point = obj.fixed_point;
-//	std::cout << "Copy constructor called\n";
 }
 
 Fixed::Fixed(const int fixed_point)
 {
-	this->fixed_point = fixed_point * (1 << fractions);
-//	std::cout << "Int constructor called\n";
+	this->fixed_point = fixed_point * (1 << fractional_bits);
 }
 
 Fixed::Fixed(const float fixed_point)
 {
-	this->fixed_point = roundf(fixed_point * (1 << fractions));
-//	std::cout << "Float constructor called\n";
+	this->fixed_point = roundf(fixed_point * (1 << fractional_bits));
 }
 
 Fixed::Fixed()
 {
 	this->fixed_point = 0;
-//	std::cout << "Default constructor called\n";
 }
 
 Fixed::~Fixed()
 {
-//	std::cout << "Destructor called\n";
 }
 
 float	Fixed::toFloat( void ) const
 {
-	return ((float)this->fixed_point / (1 << fractions));
+	return ((float)this->fixed_point / (1 << fractional_bits));
 }
 
 bool	Fixed::operator>(const Fixed &obj) const
@@ -83,18 +78,6 @@ bool	Fixed::operator!=(const Fixed &obj) const
 {
 	return (this->toFloat() != obj.toFloat());
 }
-
-//---------- Implicit Conversion -----------//
-
-/*
- * The return expression is a float
- * The Function must return Fixed obj
- *
- * C++ does this automatically
- * float a = this->fixed_point + obj.fixed_point;
- * Fixed result(a);
- * return (result);
-*/
 
 Fixed	Fixed::operator+(const Fixed &obj) const
 {
@@ -180,13 +163,11 @@ Fixed	Fixed::operator++(int)
 
 int Fixed::getRawBits(void) const
 {
-	std::cout << "getRawBits member function called\n";
 	return (fixed_point);
 }
 
 void Fixed::setRawBits(int const raw)
 {
-	std::cout << "setRawBits member function called\n";
 	this->fixed_point = raw;
 }
 

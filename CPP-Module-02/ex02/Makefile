@@ -6,7 +6,7 @@
 #    By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/15 11:29:33 by mbounoui          #+#    #+#              #
-#    Updated: 2025/11/15 11:29:44 by mbounoui         ###   ########.fr        #
+#    Updated: 2025/11/17 10:06:12 by mbounoui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = Fixed3
 
 CC = c++
 
-FLAGS = -g3 -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRC_FILES = main.cpp Fixed.cpp
 SRC_OBJS = $(SRC_FILES:.cpp=.o)

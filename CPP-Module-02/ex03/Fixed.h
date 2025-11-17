@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 10:09:18 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/16 10:09:31 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/17 11:17:44 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class Fixed
 {
 	int	fixed_point;
-	static const int fractions = 8;
+	static const int fractional_bits = 8;
 	public:
 		Fixed();
 		Fixed(const int);

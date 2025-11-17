@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/15 11:32:50 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/17 09:01:08 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/17 10:05:35 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,18 +83,6 @@ bool	Fixed::operator!=(const Fixed &obj) const
 {
 	return (this->toFloat() != obj.toFloat());
 }
-
-//---------- Implicit Conversion -----------//
-
-/*
- * The return expression is a float
- * The Function must return Fixed obj
- *
- * C++ does this automatically
- * float a = this->fixed_point + obj.fixed_point;
- * Fixed result(a);
- * return (result);
-*/
 
 Fixed	Fixed::operator+(const Fixed &obj) const
 {

@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/15 09:17:09 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/17 08:53:06 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/17 10:53:55 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ Fixed::Fixed()
 
 Fixed::Fixed(const int num)
 {
-	this->fixed_point = (num << fractions);
+	this->fixed_point = (num << fractional_bits);
 	std::cout << "int constructor called\n";
 }
 
 Fixed::Fixed(const float num)
 {
-	this->fixed_point = roundf(num * (1 << fractions));
+	this->fixed_point = roundf(num * (1 << fractional_bits));
 	std::cout << "float constructor called\n";
 }
 
@@ -59,22 +59,20 @@ Fixed::~Fixed()
 
 float Fixed::toFloat( void ) const
 {
-	return ((float)this->fixed_point / (1 << fractions));
+	return ((float)this->fixed_point / (1 << fractional_bits));
 }
 
 int Fixed::toInt( void ) const
 {
-	return (this->fixed_point >> this->fractions);
+	return (this->fixed_point >> fractional_bits);
 }
 
 int Fixed::getRawBits(void) const
 {
-	std::cout << "getRawBits member function called\n";
 	return (fixed_point);
 }
 
 void Fixed::setRawBits(int const raw)
 {
-	std::cout << "setRawBits member function called\n";
 	this->fixed_point = raw;
 }
