@@ -3,16 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 11:26:52 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/18 11:30:35 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/18 19:20:19 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.h"
 
 int	main()
-{
-
+{ 
+  ClapTrap clap("mehdi");
+  clap.attack("taha");
+  clap.beRepaired(2);
+  clap.takeDamage(4);
 }
