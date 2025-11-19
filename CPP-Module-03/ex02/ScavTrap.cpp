@@ -1,0 +1,29 @@
+
+#include "ScavTrap.h"
+
+void  ScavTrap::attack(const std::string& target)
+{
+   std::cout << "ScavTrap " << _name << " viciously attacks "
+              << target << ", causing " << _attackDamage
+              << " points of damage!\n";
+}
+
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
+{
+  _name = name;
+  this->_hitPoints = 100;
+  this->_energyPoints = 50;
+  this->_attackDamage = 20;
+  std::cout << "ScavTrap " << _name << " Constructor called" << std::endl;
+}
+
+void ScavTrap::guardGate()
+{
+  std::cout << "ScavTrap " << _name
+  << " is now in Gate keeper mode" << std::endl;
+}
+
+ScavTrap::~ScavTrap()
+{
+  std::cout << "ScavTrap " << _name << " destractor called!" << std::endl;
+}
