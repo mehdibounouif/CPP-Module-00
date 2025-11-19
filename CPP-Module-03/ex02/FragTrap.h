@@ -28,7 +28,9 @@ void FragTrap::highFivesGuys(void)
 
 void FragTrap::attack(const std::string& target)
 {
-  std::cout << "FragTrap " << _name << " attack" ;
+  std::cout << "FragTrap " << _name << " viciously unprovoked attack" 
+              << target << ", causing " << _attackDamage
+              << " points of damage!\n";
 }
 
 FragTrap::~FragTrap()
