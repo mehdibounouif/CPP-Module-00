@@ -1,33 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.h                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/18 11:28:31 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/19 08:49:03 by marvin           ###   ########.fr       */
+/*   Created: 2025/11/18 11:26:52 by mbounoui          #+#    #+#             */
+/*   Updated: 2025/11/18 19:28:54 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef _CLAPTRAP_
-#define _CLAPTRAP_
+#include "ClapTrap.h"
 
-#include <iostream>
-
-class ClapTrap
+int	main()
 {
-  std::string _name;
-  int _hitPoints;
-  int _energyPoints;
-  int _attackDamage;
-  public:
-    ClapTrap(const std::string& name);
-    ~ClapTrap();
-    void attack(const std::string& target);
-    void takeDamage(unsigned int amount);
-    void beRepaired(unsigned int amount);
-
-};
-
-#endif // !_CLAPTRAP_
+  ClapTrap clap("mehdi");
+  clap.attack("taha");
+  clap.beRepaired(2);
+  clap.takeDamage(4);
+}
