@@ -3,20 +3,20 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+         #
+#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/18 11:24:55 by mbounoui          #+#    #+#              #
-#    Updated: 2025/11/18 11:26:44 by mbounoui         ###   ########.fr        #
+#    Updated: 2025/11/19 15:03:54 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Aaaaaaaand
+NAME = Serena 
 
 CC = c++
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC_FILES = main.cpp ClapTrap.cpp
+SRC_FILES = main.cpp ClapTrap.cpp ScavTrap.cpp
 
 SRC_OBJS = $(SRC_FILES:.cpp=.o)
 

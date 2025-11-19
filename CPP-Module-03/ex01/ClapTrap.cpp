@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 11:27:28 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/19 09:03:47 by marvin           ###   ########.fr       */
+/*   Updated: 2025/11/19 09:03:47by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 ClapTrap::ClapTrap(const std::string& name):
   _name(name), _attackDamage(20), _energyPoints(50), _hitPoints(100)
 {
-  std::cout << _name << " Constructed!" << std::endl;
+  std::cout << "ClapTrap " << _name << " Constructed!" << std::endl;
 }
 
 ClapTrap::~ClapTrap()
 {
-  std::cout << _name << " Destroyed!" << std::endl;
+  std::cout << "ClapTrap " << _name << " Destroyed!" << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
