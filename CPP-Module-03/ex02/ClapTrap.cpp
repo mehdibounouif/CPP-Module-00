@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 11:27:28 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/19 09:03:47by marvin           ###   ########.fr       */
+/*   Updated: 2025/11/19 17:18:00 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,26 @@ ClapTrap::~ClapTrap()
 {
   std::cout << "ClapTrap " << _name << " Destroyed!" << std::endl;
 }
+
+ClapTrap	&ClapTrap::operator=(const ClapTrap &obj)
+{
+	if (this == &obj)
+		return (*this);
+	this->_attackDamage = obj._attackDamage;
+	this->_energyPoints = obj._energyPoints;
+	this->_hitPoints = obj._hitPoints;
+	this->_name = obj._name;
+	return (*this);
+}
+
+ClapTrap::ClapTrap(const ClapTrap &obj)
+{
+	this->_attackDamage = obj._attackDamage;
+	this->_energyPoints = obj._energyPoints;
+	this->_hitPoints = obj._hitPoints;
+	this->_name = obj._name;
+}
+
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
