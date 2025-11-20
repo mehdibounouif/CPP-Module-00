@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   FragTrap.h                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/20 08:33:25 by mbounoui          #+#    #+#             */
+/*   Updated: 2025/11/20 08:47:27 by mbounoui         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef _FLAGTRAP_
 #define _FLAGTRAP_
 
@@ -6,36 +18,12 @@
 
 class FragTrap : public ClapTrap
 {
-  public:
-    FragTrap(const std::string& name);
-    ~FragTrap();
-    void highFivesGuys(void);
-    void attack(const std::string& target);
+	public:
+		FragTrap(const std::string& name);
+		~FragTrap();
+		FragTrap&	operator=(const	FragTrap &obj);
+		FragTrap(const	FragTrap &obj);
+		void highFivesGuys(void);
+		void attack(const std::string& target);
 };
-
-FragTrap::FragTrap(const std::string& name) : ClapTrap(name)
-{
-  _name = name;
-  _hitPoints = 100;
-  _energyPoints = 100;
-  _attackDamage = 30;
-  std::cout << "FragTrap " << _name << " Construct called!" << std::endl;
-}
-void FragTrap::highFivesGuys(void)
-{
-  std::cout << "FragTrap " << _name << " hello guys, high five!" << std::endl;
-}
-
-void FragTrap::attack(const std::string& target)
-{
-  std::cout << "FragTrap " << _name << " viciously unprovoked attack" 
-              << target << ", causing " << _attackDamage
-              << " points of damage!\n";
-}
-
-FragTrap::~FragTrap()
-{
-  std::cout << "FragTrap " << _name << " Destructor called!" << std::endl;
-}
-
 #endif

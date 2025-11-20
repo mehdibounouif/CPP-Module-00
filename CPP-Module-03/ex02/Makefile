@@ -6,17 +6,17 @@
 #    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/18 11:24:55 by mbounoui          #+#    #+#              #
-#    Updated: 2025/11/19 15:03:54 by marvin           ###   ########.fr        #
+#    Updated: 2025/11/20 09:10:06 by mbounoui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Serena 
+NAME = Repetitive
 
 CC = c++
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC_FILES = main.cpp ClapTrap.cpp ScavTrap.cpp
+SRC_FILES = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
 SRC_OBJS = $(SRC_FILES:.cpp=.o)
 
