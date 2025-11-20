@@ -6,15 +6,15 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 10:16:05 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/20 10:31:11 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/20 17:47:10 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.h"
 
-
 DiamondTrap::DiamondTrap(const std::string name):
-	 _name(name), ScavTrap(name),  FragTrap(name), ClapTrap(name + "_clap_name")
+	 ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name), _name(name)
+//	 ScavTrap(name),  FragTrap(name), _name(name), ClapTrap(name + "_clap_name")
 {
 	_hitPoints = FragTrap::_hitPoints;
 	_energyPoints = ScavTrap::_energyPoints;
@@ -34,8 +34,10 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap &obj)
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap &obj) :
-	ScavTrap(obj._name), FragTrap(obj._name),
-	ClapTrap(obj._name + "_clap_name") , _name(obj._name)
+	ClapTrap(obj._name + "_clap_name"), ScavTrap(obj._name),
+	FragTrap(obj._name), _name(obj._name)
+//	ScavTrap(obj._name), FragTrap(obj._name),
+//	ClapTrap(obj._name + "_clap_name") , _name(obj._name)
 {
 	std::cout << "DiamondTrap " << _name << " Copy constructor called!" << std::endl;
 }
