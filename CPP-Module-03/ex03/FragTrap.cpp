@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 08:32:56 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/20 08:53:21 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/21 09:39:55 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 FragTrap::FragTrap(const std::string& name) : ClapTrap(name)
 {
-	_name = name;
 	_hitPoints = 100;
 	_energyPoints = 100;
 	_attackDamage = 30;
@@ -45,9 +44,17 @@ void FragTrap::highFivesGuys(void)
 
 void FragTrap::attack(const std::string& target)
 {
-	std::cout << "FragTrap " << _name << " viciously unprovoked attack" 
-		<< target << ", causing " << _attackDamage
-		<< " points of damage!\n";
+	if (_hitPoints <= 0)
+		std::cout << _name << " Cannot attack (no hit points)!" << std::endl;
+	else if (_energyPoints <= 0)
+		std::cout << _name << " Cannot attack (no energy points)!" << std::endl;
+	else
+	{
+		_energyPoints--;
+		std::cout << "FragTrap " << _name << " viciously unprovoked attack" 
+			<< target << ", causing " << _attackDamage
+			<< " points of damage!\n";
+	}
 }
 
 FragTrap::~FragTrap()

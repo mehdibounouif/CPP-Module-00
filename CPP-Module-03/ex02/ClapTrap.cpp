@@ -6,14 +6,14 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 11:27:28 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/20 08:32:32 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/21 09:36:53 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.h"
 
 ClapTrap::ClapTrap(const std::string& name):
-  _name(name), _attackDamage(20), _energyPoints(50), _hitPoints(100)
+  _name(name), _attackDamage(0), _energyPoints(10), _hitPoints(10)
 {
   std::cout << "ClapTrap " << _name << " Constructed!" << std::endl;
 }

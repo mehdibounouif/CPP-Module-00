@@ -6,7 +6,7 @@
 #    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/18 11:24:55 by mbounoui          #+#    #+#              #
-#    Updated: 2025/11/19 15:03:54 by marvin           ###   ########.fr        #
+#    Updated: 2025/11/21 09:05:32 by mbounoui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = Serena
 
 CC = c++
 
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -g3 -Wall -Wextra -Werror -std=c++98
 
 SRC_FILES = main.cpp ClapTrap.cpp ScavTrap.cpp
 
