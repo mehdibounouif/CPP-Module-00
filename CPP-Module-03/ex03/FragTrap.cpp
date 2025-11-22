@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 08:32:56 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/22 09:02:43 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/22 11:09:58 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ FragTrap::FragTrap(const std::string& name) : ClapTrap(name)
 	_attackDamage = 30;
 	std::cout << "FragTrap " << _name << " Construct called!" << std::endl;
 }
+
+FragTrap::FragTrap() : ClapTrap() {}
 
 FragTrap& FragTrap::operator=(const FragTrap &obj)
 {

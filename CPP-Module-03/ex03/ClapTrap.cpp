@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 11:27:28 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/21 09:39:11 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/22 11:07:05 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ ClapTrap::ClapTrap(const std::string& name):
 {
 	std::cout << "ClapTrap " << _name << " Constructed!" << std::endl;
 }
+
+ClapTrap::ClapTrap(){}
 
 ClapTrap::~ClapTrap()
 {

@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 11:28:31 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/20 10:20:18 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/22 11:05:26 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class ClapTrap
 		unsigned int _hitPoints;
 	public:
 		ClapTrap(const std::string& name);
+		ClapTrap();
 		~ClapTrap();
 		ClapTrap &operator=(const ClapTrap &obj);
 		ClapTrap(const ClapTrap &obj);

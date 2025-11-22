@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 10:16:05 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/22 09:02:08 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/22 11:09:51 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ DiamondTrap::DiamondTrap(const std::string name):
 	_attackDamage = FragTrap::_attackDamage;
 	std::cout << "DiamondTrap " << _name << " constructor called!" << std::endl;
 }
+
+DiamondTrap::DiamondTrap() : ClapTrap(), ScavTrap(), FragTrap() {}
 
 DiamondTrap& DiamondTrap::operator=(const DiamondTrap &obj)
 {

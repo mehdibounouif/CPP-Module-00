@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 09:24:01 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/22 09:24:02 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/22 11:10:06 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ void  ScavTrap::attack(const std::string& target)
 			<< " points of damage!\n";
 	}
 }
+
+ScavTrap::ScavTrap() : ClapTrap() {}
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {

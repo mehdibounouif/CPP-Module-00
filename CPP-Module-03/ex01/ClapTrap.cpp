@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 11:27:28 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/21 09:35:40 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/22 11:08:17 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ ClapTrap::~ClapTrap()
 {
 	std::cout << "ClapTrap " << _name << " Destroyed!" << std::endl;
 }
+
+ClapTrap::ClapTrap(){}
 
 ClapTrap	&ClapTrap::operator=(const ClapTrap &obj)
 {

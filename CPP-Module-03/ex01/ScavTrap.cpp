@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 09:25:50 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/22 09:25:51 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/22 11:08:44 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ ScavTrap::ScavTrap(const ScavTrap &obj): ClapTrap(obj)
 	std::cout << "ScavTrap " << _name
 		<< " Copy Constructor called!" << std::endl;
 }
+
+ScavTrap::ScavTrap() : ClapTrap() {}
 
 ScavTrap& ScavTrap::operator=(const ScavTrap &obj)
 {

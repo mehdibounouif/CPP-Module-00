@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 08:32:56 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/22 08:57:06 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/22 11:09:00 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ FragTrap& FragTrap::operator=(const FragTrap &obj)
 	this->_name = obj._name;
 	return (*this);
 }
+
+FragTrap::FragTrap() : ClapTrap() {}
 
 FragTrap::FragTrap(const FragTrap &obj) : ClapTrap(obj)
 {

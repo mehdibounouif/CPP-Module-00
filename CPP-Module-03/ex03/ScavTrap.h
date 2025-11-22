@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 09:23:55 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/22 09:23:56 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/22 11:05:47 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class ScavTrap : virtual public ClapTrap
 {
 	public:
 		ScavTrap(std::string name);
+		ScavTrap();
 		~ScavTrap();
 		ScavTrap&	operator=(const ScavTrap &obj);
 		ScavTrap(const ScavTrap &obj);
