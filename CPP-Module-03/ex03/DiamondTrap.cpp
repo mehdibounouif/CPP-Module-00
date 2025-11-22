@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 10:16:05 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/21 08:26:22 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/22 09:02:08 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ DiamondTrap::DiamondTrap(const DiamondTrap &obj) :
 void	DiamondTrap::whoAmI()
 {
 	std::cout << "DiamondTrap's name is " << this->_name << std::endl;
-	std::cout << "ClapTrap's name is" << this->ClapTrap::_name << std::endl;
+	std::cout << "ClapTrap's name is " << this->ClapTrap::_name << std::endl;
 }
 
 DiamondTrap::~DiamondTrap()

@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 08:32:56 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/21 09:39:55 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/22 09:02:43 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void FragTrap::attack(const std::string& target)
 	else
 	{
 		_energyPoints--;
-		std::cout << "FragTrap " << _name << " viciously unprovoked attack" 
+		std::cout << "FragTrap " << _name << " viciously unprovoked attack " 
 			<< target << ", causing " << _attackDamage
 			<< " points of damage!\n";
 	}

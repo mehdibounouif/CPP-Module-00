@@ -6,7 +6,7 @@
 /*   By: mbounoui <mbounoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 08:32:56 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/21 09:37:39 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/22 08:57:06 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,9 @@ void FragTrap::highFivesGuys(void)
 void FragTrap::attack(const std::string& target)
 {
 	if (_hitPoints <= 0)
-		std::cout << _name << " Cannot attack (no hit points)!" << std::endl;
+		std::cout << "FragTrap " << _name << " Cannot attack (no hit points)!" << std::endl;
 	else if (_energyPoints <= 0)
-		std::cout << _name << " Cannot attack (no energy points)!" << std::endl;
+		std::cout << "FragTrap " << _name << " Cannot attack (no energy points)!" << std::endl;
 	else
 	{
 		_energyPoints--;

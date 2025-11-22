@@ -6,13 +6,11 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 11:26:52 by mbounoui          #+#    #+#             */
-/*   Updated: 2025/11/20 10:29:14 by mbounoui         ###   ########.fr       */
+/*   Updated: 2025/11/22 09:23:44 by mbounoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.h"
 #include "ScavTrap.h"
-#include "FragTrap.h"
 #include "DiamondTrap.h"
 
 int	main()
